@@ -1,0 +1,36 @@
+<?php
+include 'config.php';
+
+$sql = "SELECT * FROM datos_ambientales ORDER BY fecha DESC LIMIT 1";
+$result = $conn->query($sql);
+$data = $result->fetch_assoc();
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo Ambiental</title>
+    <link rel="stylesheet" href="monitoreo.css">
+</head>
+<body>
+    <header>
+        <h1>Monitoreo Ambiental - Taller de Motos</h1>
+    </header>
+
+    <main>
+        <h2>Datos Ambientales Recientes</h2>
+        <p>Temperatura: <?php echo $data['temperatura']; ?> °C</p>
+        <p>Humedad: <?php echo $data['humedad']; ?> %</p>
+        <p>Calidad del Aire: <?php echo $data['calidad_aire']; ?> ppm</p>
+        <p>Fecha: <?php echo $data['fecha']; ?></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Taller de Motos. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+
+</html>

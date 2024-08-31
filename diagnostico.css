@@ -1,0 +1,200 @@
+body {
+    background-image: url('imagenes/imagen_de_fondo.jpg'); /* Ruta de la imagen de fondo */
+    /* Fuente del texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Eliminación de márgenes y rellenos por defecto */
+    margin: 0;
+    padding: 0;
+    /* Fondo degradado en tonos verdes suaves */
+    background: linear-gradient(to right, #d0f0c0, #a3d9a5, #76c7c0);
+    /* Color del texto */
+    color: #333;
+    /* Flexbox para estructurar la página en columnas */
+    display: flex;
+    flex-direction: column;
+    /* Asegura que el cuerpo ocupe al menos la altura completa de la ventana */
+    min-height: 100vh;
+}
+
+header {
+    /* Color de fondo del encabezado */
+    background-color: #3b6e40;
+    /* Color del texto en el encabezado */
+    color: #f5f5f5;
+    /* Relleno dentro del encabezado */
+    padding: 15px 20px;
+    /* Alineación del texto al centro */
+    text-align: center;
+    /* Sombra para dar profundidad al encabezado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    /* Posiciona el menú de navegación de forma fija */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Ancho del menú de navegación */
+    width: 250px;
+    height: 100%;
+    /* Color de fondo del menú */
+    background-image: url('imagenes/imagen_de_fondo.jpg'); /* Ruta de la imagen de fondo */
+    /* Color del texto en el menú */
+    color: #f5f5f5;
+    /* Relleno superior */
+    padding-top: 20px;
+    /* Sombra para separar visualmente el menú del contenido */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    /* Elimina los puntos de la lista */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    /* Espaciado vertical entre los elementos de la lista */
+    margin: 15px 0;
+}
+
+nav ul li a {
+    /* Color del texto del enlace */
+    color: #f5f5f5;
+    /* Eliminación del subrayado de los enlaces */
+    text-decoration: none;
+    /* Relleno dentro del enlace */
+    padding: 10px 20px;
+    /* El enlace se comporta como un bloque */
+    display: block;
+    /* Bordes redondeados para el enlace */
+    border-radius: 5px;
+    /* Transición suave del color de fondo al pasar el ratón */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    /* Color de fondo del enlace cuando se pasa el ratón por encima */
+    background-color: #4caf50;
+}
+
+main {
+    /* Margen a la izquierda para dejar espacio al menú de navegación */
+    margin-left: 250px;
+    /* Relleno dentro del área principal */
+    padding: 20px;
+    /* Permite que el área principal se expanda para llenar el espacio disponible */
+    flex: 1;
+    /* Fondo del área principal con un degradado verde suave */
+    background: linear-gradient(to right, #e2f1e6, #b9e1b6, #9de0c2);
+    /* Bordes redondeados para el área principal */
+    border-radius: 10px;
+    /* Sombra para dar profundidad al área principal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intro img {
+    /* Establece un ancho fijo para la imagen */
+    width: 50%; /* Ajusta este valor para hacer la imagen más pequeña o más grande */
+    /* Mantiene la proporción de la imagen */
+    height: auto;
+    /* Bordes redondeados para la imagen */
+    border-radius: 8px;
+}
+
+.video {
+    /* Fondo distintivo para la sección del video */
+    background-color: #a5d6a7; /* Un verde suave que contrasta con los fondos existentes */
+    /* Bordes redondeados para la sección del video */
+    border-radius: 10px;
+    /* Relleno dentro de la sección del video */
+    padding: 20px;
+    /* Sombra para dar profundidad a la sección del video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Espaciado superior en la sección del video */
+    margin-top: 20px;
+}
+
+footer {
+    /* Color de fondo del pie de página */
+    background-color: #1b3a1b;
+    /* Color del texto en el pie de página */
+    color: #e5eee7;
+    /* Alineación del texto al centro */
+    text-align: center;
+    /* Relleno dentro del pie de página */
+    padding: 10px 20px;
+    /* Sombra para dar profundidad al pie de página */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el mensaje emergente (popup) */
+.popup {
+    /* Oculta el popup por defecto */
+    display: none;
+    /* Posiciona el popup en el centro de la pantalla */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Color de fondo del popup */
+    background: #a2c8a4;
+    /* Color del texto del popup */
+    color: #333;
+    /* Borde del popup */
+    border: 1px solid #7a9d3d;
+    /* Sombra para dar profundidad al popup */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Relleno dentro del popup */
+    padding: 20px;
+    /* Asegura que el popup esté sobre otros elementos */
+    z-index: 1000;
+    /* Ancho del popup */
+    width: 300px;
+    /* Bordes redondeados para el popup */
+    border-radius: 10px;
+}
+
+.popup h2 {
+    /* Margen inferior del título en el popup */
+    margin: 0 0 15px;
+}
+
+.popup button {
+    /* Color de fondo del botón del popup */
+    background-color: #4caf50;
+    /* Color del texto del botón del popup */
+    color: #fff;
+    /* Eliminación del borde del botón */
+    border: none;
+    /* Bordes redondeados para el botón */
+    border-radius: 5px;
+    /* Relleno dentro del botón */
+    padding: 10px 15px;
+    /* Cursor en forma de mano para indicar clickeo */
+    cursor: pointer;
+    /* Transición suave del color de fondo del botón */
+    transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+    /* Color de fondo del botón cuando se pasa el ratón por encima */
+    background-color: #388e3c;
+}
+
+/* Estilos para la capa de fondo del popup */
+.overlay {
+    /* Oculta la capa de fondo por defecto */
+    display: none;
+    /* Posiciona la capa de fondo para cubrir toda la pantalla */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Color de fondo de la capa de fondo con opacidad */
+    background: rgba(0, 0, 0, 0.5);
+    /* Asegura que la capa de fondo esté debajo del popup */
+    z-index: 999;
+}

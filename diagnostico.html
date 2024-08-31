@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de la Moto - EcoMoto Tech</title>
+    <link rel="stylesheet" href="diagnostico.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>EcoMoto Tech</h1>
+            <h2>Diagnóstico de la Moto</h2>
+        </header>
+
+        <main>
+            <form action="submit_diagnostico.php" method="post" id="diagnostico-form">
+                <!-- Sección de Datos del Vehículo -->
+                <fieldset>
+                    <legend>Datos del Vehículo</legend>
+                    <table>
+                        <tr>
+                            <td><label for="placa">Placa de la Moto:</label></td>
+                            <td><input type="text" id="placa" name="placa" placeholder="Ingrese la placa" required></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <!-- Sección de Diagnóstico -->
+                <fieldset>
+                    <legend>Estado del Vehículo</legend>
+                    <table>
+                        <tr>
+                            <td><label for="estado_motor">Estado del Motor:</label></td>
+                            <td>
+                                <select id="estado_motor" name="estado_motor" required>
+                                    <option value="" disabled selected>Seleccione el estado</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="estado_frenos">Estado de los Frenos:</label></td>
+                            <td>
+                                <select id="estado_frenos" name="estado_frenos" required>
+                                    <option value="" disabled selected>Seleccione el estado</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="nivel_aceite">Nivel de Aceite:</label></td>
+                            <td>
+                                <select id="nivel_aceite" name="nivel_aceite" required>
+                                    <option value="" disabled selected>Seleccione el nivel</option>
+                                    <option value="Alto">Alto</option>
+                                    <option value="Medio">Medio</option>
+                                    <option value="Bajo">Bajo</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="estado_neumaticos">Estado de los Neumáticos:</label></td>
+                            <td>
+                                <select id="estado_neumaticos" name="estado_neumaticos" required>
+                                    <option value="" disabled selected>Seleccione el estado</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <!-- Sección de Observaciones -->
+                <fieldset>
+                    <legend>Observaciones Generales</legend>
+                    <table>
+                        <tr>
+                            <td><label for="observaciones">Observaciones:</label></td>
+                            <td><textarea id="observaciones" name="observaciones" rows="5" placeholder="Escriba aquí cualquier observación adicional"></textarea></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <!-- Botón de Envío -->
+                <div class="form-group">
+                    <button type="submit">Guardar Diagnóstico</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 EcoMoto Tech. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
